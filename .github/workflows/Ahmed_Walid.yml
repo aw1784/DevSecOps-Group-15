@@ -21,7 +21,8 @@ jobs:
 
       - name: Build and deploy to production
         run: |
-          echo "Building and deploying to production environment "
+          echo "Building and deploying to production environment " >> output.txt
+          cat output.txt
           # Add your build and deployment commands here
   dev-job:
     runs-on: ubuntu-latest
@@ -32,5 +33,6 @@ jobs:
 
       - name: Build and deploy to development
         run: |
-          echo "Building and deploying to development environment"
+          echo "Building and deploying to development environment" >> output.txt
+          cat output.txt
           # Add your build and deployment commands here
